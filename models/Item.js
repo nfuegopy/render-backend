@@ -1,16 +1,17 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-// Create Schema
-const ItemSchema = new Schema({
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
+
+const Item = sequelize.define('Item', {
     name: {
-        type: String,
-        required: true
+        type: DataTypes.STRING,
+        allowNull: false
     },
     date: {
-        type: Date,
-        default: Date.now
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
     }
 });
 
-module.exports = mongoose.model('item', ItemSchema);
+module.exports = Item;
+
