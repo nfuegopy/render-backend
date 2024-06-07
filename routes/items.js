@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     // Item Model
     const Item = require('../models/Items'); // Asegúrate de que esto sea correcto
 
-    // @route GET api/items
+    // @route GET api/items 
     // @desc Get All Items
     router.get('/', (req, res) => {
         Item.findAll()
