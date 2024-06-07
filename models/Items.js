@@ -5,12 +5,14 @@ const sequelize = require('../config/database');
 const Item = sequelize.define('Item', {
     name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
     date: {
         type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
-    }
+        defaultValue: DataTypes.NOW,
+    },
+}, {
+    timestamps: true,
 });
 
 module.exports = Item;
