@@ -1,11 +1,11 @@
 const express = require('express');
 const sequelize = require('./config/database');
 const dotenv = require('dotenv');
-
+const cors = require('cors');
 dotenv.config();
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
 const Item = require('./models/Items');
