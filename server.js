@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-const Item = require('./models/Item');
+const Item = require('./models/Items');
 
 // Sincroniza los modelos
 sequelize.sync()
